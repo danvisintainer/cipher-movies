@@ -11,7 +11,12 @@
       <tr>
         <td class="vert-align"><%= image_tag r["artworkUrl100"] %></td>
         <td class="vert-align"><h3><%= r["trackName"] %></h3></td>
-        <td class="vert-align"><%= button_to 'Add to watch list', {:controller => 'movies', :action => 'create', :params => {id: r['trackId']}, :remote => true}, {class: 'btn btn-primary', id: r['trackId']} %></td>
+        <td class="vert-align">
+          <%= form_tag 'movies/create', remote: true do -%>
+            <%= hidden_field_tag 'movie_id', r["trackId"] %>
+            <%= submit_tag "Add to movie list", class: 'btn btn-primary', id: r["trackId"] %>
+          <% end -%>
+        </td>
       </tr>
       <% end %>
     </tbody>

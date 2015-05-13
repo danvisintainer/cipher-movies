@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   post 'movies/search' => 'movies#search'
   post 'movies/create' => 'movies#create'
+  post 'movies/destroy/:id' => 'movies#destroy'
 
   get '/signup' => 'users#new'
   get '/login' => 'sessions#new'

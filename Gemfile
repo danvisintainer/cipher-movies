@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.1.1'
 
+gem 'itunes-search-api'
+
 gem 'bcrypt', '3.1.7'
 gem 'jbuilder', '2.0'
 gem 'jquery-rails', '2.0.2'

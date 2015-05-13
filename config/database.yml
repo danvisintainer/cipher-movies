@@ -40,7 +40,7 @@ test:
 #   <<: *default
 #   database: cipher_movies_test
 
-default: &default
+production:
   adapter: postgresql
   encoding: unicode
   pool: 5

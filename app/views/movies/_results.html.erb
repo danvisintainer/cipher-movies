@@ -1,12 +1,6 @@
 <% if @results["resultCount"].to_i == 0 %>
   No results! That's too bad.
 <% else %>
-  <% if !current_user %>
-    <div class="alert alert-dismissible alert-info">
-      <button type="button" class="close" data-dismiss="alert">×</button>
-      Hey, you can't have a watch list if you're not <%= link_to "logged in", '/login' %>!
-    </div>
-  <% end %>
 
   <div class="page-header">
     <h2 id="navbar">Search results</h2>

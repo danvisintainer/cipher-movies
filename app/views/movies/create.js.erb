@@ -1,1 +1,4 @@
-alert("WTF");
+$("#<%= j params['movie_id'] %>").val('Added!');
+$("#<%= j params['movie_id'] %>").addClass('btn-success');
+$("#<%= j params['movie_id'] %>").prop('disabled', true);
+$("#<%= j params['movie_id'] %>").parent().parent().parent().addClass('success');

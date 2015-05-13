@@ -6,11 +6,11 @@
   <table class="table table-striped table-hover">
     <tbody>
       <% @watch_list.each do |movie| %>
-      <tr>
+      <tr id="<%= movie.id %>">
         <td class="vert-align"><%= image_tag movie.image_link %></td>
         <td class="vert-align"><h3><%= movie.name %></h3></td>
         <td class="vert-align">
-          <%= form_tag "/movies/destroy/#{movie.id}" do -%>
+          <%= form_tag "/movies/destroy/#{movie.id}", remote: true do -%>
             <%= submit_tag "Remove", class: 'btn btn-danger' %>
           <% end -%>
         </td>

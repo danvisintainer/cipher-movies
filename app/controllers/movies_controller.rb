@@ -26,7 +26,6 @@ class MoviesController < ApplicationController
   end
 
   def destroy
-
     # no destroy validation yet - I just wanted to get a delete function working
     Movie.destroy(params["id"])
 

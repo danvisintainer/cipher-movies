@@ -14,7 +14,7 @@
         <td class="vert-align">
           <%= form_tag 'movies/create', remote: true do -%>
             <%= hidden_field_tag 'movie_id', r["trackId"] %>
-            <%= submit_tag "Add to movie list", class: 'btn btn-primary', id: r["trackId"] %>
+            <%= submit_tag "Add to watch list", class: 'btn btn-primary', id: r["trackId"] %>
           <% end -%>
         </td>
       </tr>

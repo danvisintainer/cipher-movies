@@ -1,9 +1,45 @@
-<h1>Sign up</h1>
+<div class="container">
+  <div class="col-lg-8 col-md-offset-2">
+    
+    <h1>Sign up</h1>
 
-<%= form_for User.new do |f| -%>
-  <%= f.text_field :name, placeholder: 'Name' %><br>
-  <%= f.text_field :email, placeholder: 'Email' %><br>
-  <%= f.password_field :password, placeholder: 'Password' %><br>
-  <%= f.password_field :password_confirmation, placeholder: 'Confirm Password' %><br>
-  <%= f.submit "Sign up" %>
-<% end -%>
+    <div class="well well bs-component">
+    <%= form_for User.new, html: {class: 'form-horizontal'} do |f| -%>
+      <div class="form-group">
+        <%= f.label :name, class: 'col-lg-2 control-label' %>
+        <div class="col-lg-10">
+          <%= f.text_field :name, placeholder: 'Name', class: 'form-control' %>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :email, class: 'col-lg-2 control-label' %>
+        <div class="col-lg-10">
+          <%= f.text_field :email, placeholder: 'Email', class: 'form-control' %>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :password, class: 'col-lg-2 control-label' %>
+        <div class="col-lg-10">
+        <%= f.password_field :password, placeholder: 'Password', class: 'form-control' %>
+      </div>
+      </div>
+      <div class="form-group">
+        <%= f.label 'Confirm', class: 'col-lg-2 control-label' %>
+        <div class="col-lg-10">
+        <%= f.password_field :password_confirmation, placeholder: 'Confirm Password', class: 'form-control' %>
+      </div>
+      </div>
+      <div class="form-group">
+        <div class="col-lg-10 col-lg-offset-2">
+          <%= f.submit "Sign up", class: 'btn btn-default' %>
+        </div>
+      </div>
+    <% end -%>
+    </div>
+
+    <div>
+      <%= link_to "Have an account already? Log in.", '/login' %>
+    </div>
+
+  </div>
+</div>

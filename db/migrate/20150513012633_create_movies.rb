@@ -4,6 +4,7 @@ class CreateMovies < ActiveRecord::Migration
       t.integer :itunes_id
       t.string :name
       t.string :image_link
+      t.integer :user_id
 
       t.timestamps
     end

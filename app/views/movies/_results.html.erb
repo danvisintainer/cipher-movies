@@ -1,1 +1,15 @@
-<%= @results %>
+<% if @results["resultCount"].to_i == 0 %>
+  No results! That's too bad.
+<% else %>
+  <table class="table-responsive">
+    <tbody>
+      <% @results["results"].each do |r| %>
+      <tr>
+        <td><%= image_tag r["artworkUrl100"] %></td>
+        <td><%= r["trackName"] %></td>
+        <td><%= button_to 'Add to watch list', {:controller => 'movies', :action => 'create', :params => {id: r['trackId']}, :remote => true} %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

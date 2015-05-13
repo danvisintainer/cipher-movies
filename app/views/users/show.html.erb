@@ -9,6 +9,11 @@
       <tr>
         <td class="vert-align"><%= image_tag movie.image_link %></td>
         <td class="vert-align"><h3><%= movie.name %></h3></td>
+        <td class="vert-align">
+          <%= form_tag "/movies/destroy/#{movie.id}" do -%>
+            <%= submit_tag "Remove", class: 'btn btn-danger' %>
+          <% end -%>
+        </td>
       </tr>
       <% end %>
     </tbody>

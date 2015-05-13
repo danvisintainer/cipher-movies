@@ -7,4 +7,8 @@ class MoviesController < ApplicationController
       f.js { }
     end
   end
+
+  def create
+
+  end
 end

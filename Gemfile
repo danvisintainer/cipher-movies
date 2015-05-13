@@ -11,6 +11,7 @@ gem 'settingslogic', '2.0.9'
 gem 'turbolinks', '2.5.3'
 gem 'thin', '1.6.3'
 gem 'pg'
+gem 'rails_12factor'
 
 group :doc do
   gem 'sdoc', '0.4.0'

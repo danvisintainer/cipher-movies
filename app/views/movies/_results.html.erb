@@ -1,13 +1,17 @@
 <% if @results["resultCount"].to_i == 0 %>
   No results! That's too bad.
 <% else %>
-  <table class="table-responsive">
+  <div class="page-header">
+    <h2 id="navbar">Search results</h2>
+  </div>
+
+  <table class="table table-striped table-hover">
     <tbody>
       <% @results["results"].each do |r| %>
       <tr>
-        <td><%= image_tag r["artworkUrl100"] %></td>
-        <td><%= r["trackName"] %></td>
-        <td><%= button_to 'Add to watch list', {:controller => 'movies', :action => 'create', :params => {id: r['trackId']}, :remote => true}, {class: 'buttonthing', id: r['trackId']} %></td>
+        <td class="vert-align"><%= image_tag r["artworkUrl100"] %></td>
+        <td class="vert-align"><h3><%= r["trackName"] %></h3></td>
+        <td class="vert-align"><%= button_to 'Add to watch list', {:controller => 'movies', :action => 'create', :params => {id: r['trackId']}, :remote => true}, {class: 'btn btn-primary', id: r['trackId']} %></td>
       </tr>
       <% end %>
     </tbody>

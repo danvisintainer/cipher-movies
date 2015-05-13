@@ -24,4 +24,14 @@ class MoviesController < ApplicationController
       end
     end
   end
+
+  def destroy
+
+    # no destroy validation yet - I just wanted to get a delete function working
+    Movie.destroy(params["id"])
+
+    respond_to do |f|
+      f.js { }
+    end
+  end
 end

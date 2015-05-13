@@ -1,4 +1,7 @@
+<h1>CipherMovies by Dan Visintainer</h1>
+
 <%= form_tag '/movies/search', :remote => true do |f| -%>
-  <%= text_field_tag 'Name' %>
+  <%= label_tag 'Movie Name' %>
+  <%= text_field_tag 'name' %>
   <%= submit_tag "Search" %>
 <% end -%>

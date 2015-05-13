@@ -1,4 +1,6 @@
 class MoviesController < ApplicationController
+
+  require 'net/http'
   def search
     itunes_response = Net::HTTP.get_response('itunes.apple.com', "/search?entity=movie&term=#{URI::encode(params["name"])}")
     @results = JSON.parse(itunes_response.body)

@@ -7,7 +7,7 @@
       <tr>
         <td><%= image_tag r["artworkUrl100"] %></td>
         <td><%= r["trackName"] %></td>
-        <td><%= button_to 'Add to watch list', {:controller => 'movies', :action => 'create', :params => {id: r['trackId']}, :remote => true} %></td>
+        <td><%= button_to 'Add to watch list', {:controller => 'movies', :action => 'create', :params => {id: r['trackId']}, :remote => true}, {class: 'buttonthing', id: r['trackId']} %></td>
       </tr>
       <% end %>
     </tbody>

@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="page-header">
+    <h2 id="navbar"><%= current_user.name %>'s Watch List</h2>
+  </div>
+
+  <table class="table table-striped table-hover">
+    <tbody>
+      <% @watch_list.each do |movie| %>
+      <tr>
+        <td class="vert-align"><%= image_tag movie.image_link %></td>
+        <td class="vert-align"><h3><%= movie.name %></h3></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

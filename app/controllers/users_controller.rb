@@ -1,8 +1,10 @@
 class UsersController < ApplicationController
   def show
-    binding.pry
-    @user = User.find(params[:id])
-    # @watch_list = 
+    if !current_user
+      redirect_to '/login' 
+    else
+      @watch_list = current_user.movies.all
+    end
   end
 
   def new
@@ -21,7 +23,6 @@ class UsersController < ApplicationController
   end
 
   private
-  
     def user_params
       params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end

@@ -1,5 +1,12 @@
 <% if @results["resultCount"].to_i == 0 %>
-  No results! That's too bad.
+  <div class="container">
+    <div class="col-lg-12">
+      <div class="alert alert-dismissible alert-danger">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <strong>No results!</strong> That's too bad. Why don't you try your search again?
+      </div>
+    </div>
+  </div>
 <% else %>
 
   <div class="page-header">

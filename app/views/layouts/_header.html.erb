@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <% if current_user %>
-          <li><%= link_to "#{current_user.name}'s Watch List", '/user/show' %></li>
+          <li><%= link_to "#{current_user.name}'s Watch List", '/users/show' %></li>
           <li><%= link_to "Log Out", '/logout' %></li>
         <% else %>
           <li><%= link_to "Log In", '/login' %></li>

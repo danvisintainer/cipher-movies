@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.1.1'
+gem 'twitter-bootstrap-rails'
 
 gem 'bcrypt', '3.1.7'
 gem 'jbuilder', '2.0'
